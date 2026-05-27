@@ -1,0 +1,94 @@
+---
+import curriculum from '../data/curriculum.json';
+
+const phaseColors = {
+  green: { bg: 'bg-green-500/10', border: 'border-green-500/30', text: 'text-green-400', dot: 'bg-green-500' },
+  blue: { bg: 'bg-blue-500/10', border: 'border-blue-500/30', text: 'text-blue-400', dot: 'bg-blue-500' },
+  purple: { bg: 'bg-purple-500/10', border: 'border-purple-500/30', text: 'text-purple-400', dot: 'bg-purple-500' },
+  amber: { bg: 'bg-amber-500/10', border: 'border-amber-500/30', text: 'text-amber-400', dot: 'bg-amber-500' },
+  red: { bg: 'bg-red-500/10', border: 'border-red-500/30', text: 'text-red-400', dot: 'bg-red-500' },
+  cyan: { bg: 'bg-cyan-500/10', border: 'border-cyan-500/30', text: 'text-cyan-400', dot: 'bg-cyan-500' }
+};
+---
+
+<section id="timeline" class="py-16">
+  <div class="text-center mb-16">
+    <h2 class="text-4xl font-bold text-white mb-4">Learning Timeline</h2>
+    <p class="text-slate-400 text-lg">6 phases across 64 weeks</p>
+  </div>
+
+  <div class="space-y-12">
+    {curriculum.phases.map((phase, index) => {
+      const colors = phaseColors[phase.color as keyof typeof phaseColors];
+      
+      return (
+        <div class="group">
+          <!-- Phase header -->
+          <div class={`p-6 rounded-2xl ${colors.bg} border ${colors.border} mb-6`}>
+            <div class="flex items-center gap-4 mb-3">
+              <span class="text-3xl">{phase.emoji}</span>
+              <div>
+                <h3 class="text-2xl font-bold text-white">
+                  Phase {phase.id}: {phase.title}
+                </h3>
+                <p class={`${colors.text} text-sm`}>
+                  Week {phase.weeks} • {phase.months} {phase.months === 1 ? 'month' : 'months'}
+                </p>
+              </div>
+            </div>
+            <p class="text-slate-300">{phase.description}</p>
+          </div>
+
+          <!-- Topics grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {phase.topics.map((topic) => (
+              <div class={`week-block p-5 rounded-xl bg-slate-800/50 border border-slate-700/50 hover:border-slate-600/50 cursor-pointer`}
+                   data-week={topic.week}>
+                <div class="flex items-start gap-3">
+                  <div class={`w-2 h-2 rounded-full ${colors.dot} mt-2 flex-shrink-0`}></div>
+                  <div>
+                    <div class="flex items-center gap-2 mb-2">
+                      <span class={`text-xs font-mono ${colors.text} bg-slate-900/50 px-2 py-1 rounded`}>
+                        Week {topic.week}
+                      </span>
+                    </div>
+                    <h4 class="font-semibold text-white mb-3">{topic.title}</h4>
+                    <ul class="space-y-2">
+                      {topic.tasks.map((task) => (
+                        <li class="flex items-start gap-2 text-sm text-slate-400">
+                          <input type="checkbox" class="mt-1 flex-shrink-0" data-task={task} />
+                          <span>{task}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</section>
+
+<script>
+  // Save checkbox state to localStorage
+  document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+    const input = checkbox as HTMLInputElement;
+    const taskId = input.dataset.task;
+    
+    if (taskId) {
+      // Load saved state
+      const saved = localStorage.getItem(`task-${taskId}`);
+      if (saved === 'true') {
+        input.checked = true;
+      }
+      
+      // Save on change
+      input.addEventListener('change', () => {
+        localStorage.setItem(`task-${taskId}`, input.checked.toString());
+      });
+    }
+  });
+</script>

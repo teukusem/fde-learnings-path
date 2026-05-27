@@ -1,0 +1,71 @@
+---
+import '../styles/global.css';
+import Hero from '../components/Hero.astro';
+import Timeline from '../components/Timeline.astro';
+import TechStack from '../components/TechStack.astro';
+import Milestones from '../components/Milestones.astro';
+import Sidebar from '../components/Sidebar.astro';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FDE Learning Path — Forward Deployed Engineer</title>
+    <meta name="description" content="Complete learning path to become a Forward Deployed Engineer. 64 weeks curriculum covering JavaScript, TypeScript, React, Next.js, and more." />
+  </head>
+  <body class="min-h-screen">
+    <!-- Background gradient -->
+    <div class="fixed inset-0 -z-10">
+      <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-900/20"></div>
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-indigo-500/5 rounded-full blur-3xl"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-xl border-b border-slate-700/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl">🎯</span>
+            <span class="font-bold text-lg text-white">FDE Path</span>
+          </div>
+          <div class="hidden md:flex items-center gap-6 text-sm text-slate-300">
+            <a href="#timeline" class="hover:text-white transition-colors">Timeline</a>
+            <a href="#tech-stack" class="hover:text-white transition-colors">Tech Stack</a>
+            <a href="#milestones" class="hover:text-white transition-colors">Milestones</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+    <main class="pt-20 pb-16">
+      <Hero />
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+          <!-- Sidebar -->
+          <aside class="lg:sticky lg:top-20 lg:h-[calc(100vh-5rem)] lg:w-64 flex-shrink-0">
+            <Sidebar />
+          </aside>
+          
+          <!-- Main content -->
+          <div class="flex-1 space-y-24">
+            <Timeline />
+            <TechStack />
+            <Milestones />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-700/50 py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-slate-400 text-sm">
+        <p>Built with Astro + Tailwind CSS</p>
+        <p class="mt-2">FDE Learning Path — Updated May 2026</p>
+      </div>
+    </footer>
+  </body>
+</html>

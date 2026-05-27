@@ -1,0 +1,100 @@
+---
+import curriculum from '../data/curriculum.json';
+
+const phases = curriculum.phases;
+const totalWeeks = 64;
+const totalMonths = 16;
+---
+
+<div class="space-y-6">
+  <!-- Quick stats -->
+  <div class="p-5 rounded-2xl bg-slate-800/50 border border-slate-700/50">
+    <h3 class="font-bold text-white mb-4">📊 Overview</h3>
+    <div class="space-y-3 text-sm">
+      <div class="flex justify-between">
+        <span class="text-slate-400">Duration</span>
+        <span class="text-white font-semibold">{totalMonths} months</span>
+      </div>
+      <div class="flex justify-between">
+        <span class="text-slate-400">Weeks</span>
+        <span class="text-white font-semibold">{totalWeeks}</span>
+      </div>
+      <div class="flex justify-between">
+        <span class="text-slate-400">Phases</span>
+        <span class="text-white font-semibold">{phases.length}</span>
+      </div>
+      <div class="flex justify-between">
+        <span class="text-slate-400">Milestones</span>
+        <span class="text-white font-semibold">{curriculum.milestones.length}</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phase navigation -->
+  <div class="p-5 rounded-2xl bg-slate-800/50 border border-slate-700/50">
+    <h3 class="font-bold text-white mb-4">🧭 Phases</h3>
+    <nav class="space-y-2">
+      {phases.map((phase) => (
+        <a 
+          href={`#phase-${phase.id}`}
+          class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-700/50 transition-colors text-sm group"
+        >
+          <span class="text-lg">{phase.emoji}</span>
+          <div class="flex-1">
+            <div class="text-white group-hover:text-indigo-300 transition-colors">
+              {phase.title}
+            </div>
+            <div class="text-xs text-slate-500">
+              Week {phase.weeks}
+            </div>
+          </div>
+        </a>
+      ))}
+    </nav>
+  </div>
+
+  <!-- Time commitment -->
+  <div class="p-5 rounded-2xl bg-slate-800/50 border border-slate-700/50">
+    <h3 class="font-bold text-white mb-4">⏱️ Time Commitment</h3>
+    <div class="space-y-3 text-sm">
+      <div class="p-3 rounded-lg bg-green-500/10 border border-green-500/20">
+        <div class="font-semibold text-green-400">🐢 Casual</div>
+        <div class="text-slate-400 text-xs mt-1">5-7h/week → 18-19 months</div>
+      </div>
+      <div class="p-3 rounded-lg bg-blue-500/10 border border-blue-500/20">
+        <div class="font-semibold text-blue-400">🚶 Moderate</div>
+        <div class="text-slate-400 text-xs mt-1">10-15h/week → 14-15 months</div>
+      </div>
+      <div class="p-3 rounded-lg bg-amber-500/10 border border-amber-500/20">
+        <div class="font-semibold text-amber-400">🏃 Aggressive</div>
+        <div class="text-slate-400 text-xs mt-1">20-30h/week → 11-12 months</div>
+      </div>
+      <div class="p-3 rounded-lg bg-red-500/10 border border-red-500/20">
+        <div class="font-semibold text-red-400">🔥 Full-time</div>
+        <div class="text-slate-400 text-xs mt-1">40h/week → 9-10 months</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Resources -->
+  <div class="p-5 rounded-2xl bg-slate-800/50 border border-slate-700/50">
+    <h3 class="font-bold text-white mb-4">📚 Key Resources</h3>
+    <div class="space-y-2 text-sm">
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener" class="block text-indigo-400 hover:text-indigo-300 transition-colors">
+        → MDN Web Docs
+      </a>
+      <a href="https://javascript.info" target="_blank" rel="noopener" class="block text-indigo-400 hover:text-indigo-300 transition-colors">
+        → javascript.info
+      </a>
+      <a href="https://react.dev" target="_blank" rel="noopener" class="block text-indigo-400 hover:text-indigo-300 transition-colors">
+        → React Docs
+      </a>
+      <a href="https://nextjs.org/docs" target="_blank" rel="noopener" class="block text-indigo-400 hover:text-indigo-300 transition-colors">
+        → Next.js Docs
+      </a>
+      <a href="https://patterns.dev" target="_blank" rel="noopener" class="block text-indigo-400 hover:text-indigo-300 transition-colors">
+        → Patterns.dev
+      </a>
+    </div>
+  </div>
+</div>

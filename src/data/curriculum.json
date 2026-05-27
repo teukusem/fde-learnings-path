@@ -1,0 +1,394 @@
+{
+  "phases": [
+    {
+      "id": 0,
+      "title": "JavaScript Deep Dive",
+      "emoji": "⚡",
+      "weeks": "1-20",
+      "months": 5,
+      "color": "green",
+      "description": "Build a rock-solid JavaScript foundation",
+      "topics": [
+        {
+          "week": "1-2",
+          "title": "Types, Coercion & Variables",
+          "tasks": [
+            "Experiment: typeof, == vs ===, truthy/falsy values",
+            "Find 10 coercion surprises, write in notes.md",
+            "Baca: MDN Data Types & Type Coercion"
+          ]
+        },
+        {
+          "week": "3-4",
+          "title": "Scope, Hoisting & Closures",
+          "tasks": [
+            "Experiment: var vs let vs const behavior",
+            "Build: counter(), once(), memoize() from scratch",
+            "Fix: classic for-loop + setTimeout bug without let"
+          ]
+        },
+        {
+          "week": "5-6",
+          "title": "Functions & `this` Binding",
+          "tasks": [
+            "Build: pipe(), compose(), curry() from scratch",
+            "Build: myBind(), myCall(), myApply() polyfills",
+            "Experiment: 4 this-binding rules + priority"
+          ]
+        },
+        {
+          "week": "7-8",
+          "title": "Prototypes & Object Model",
+          "tasks": [
+            "Experiment: __proto__ vs prototype, prototype chain",
+            "Build: class inheritance without class keyword",
+            "Baca: javascript.info/prototypes"
+          ]
+        },
+        {
+          "week": "9-10",
+          "title": "Async: Promises & Event Loop",
+          "tasks": [
+            "Experiment: setTimeout vs Promise.resolve order",
+            "Build: 10 async predict-output puzzles",
+            "Baca: javascript.info/promises"
+          ]
+        },
+        {
+          "week": "11-12",
+          "title": "Async Patterns & Generators",
+          "tasks": [
+            "Build: fetchWithRetry(), parallelLimit(), timeout()",
+            "Experiment: sequential vs parallel await",
+            "Build: simple async task queue"
+          ]
+        },
+        {
+          "week": "13-14",
+          "title": "DOM Manipulation",
+          "tasks": [
+            "Build: Todo app (CRUD, vanilla JS)",
+            "Baca: javascript.info/document",
+            "Event delegation patterns"
+          ]
+        },
+        {
+          "week": "15-16",
+          "title": "Browser APIs",
+          "tasks": [
+            "Build: lazy image loader (IntersectionObserver)",
+            "Build: infinite scroll",
+            "Experiment: MutationObserver, ResizeObserver"
+          ]
+        },
+        {
+          "week": "17-18",
+          "title": "Design Patterns",
+          "tasks": [
+            "Build: EventEmitter from scratch",
+            "Implement: Module, Observer, Factory patterns",
+            "Baca: patterns.dev"
+          ]
+        },
+        {
+          "week": "19-20",
+          "title": "Reactive System & Performance",
+          "tasks": [
+            "Build: reactive() + effect() + computed()",
+            "Chrome DevTools Memory profiling",
+            "Find & fix a memory leak"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "title": "TypeScript",
+      "emoji": "🔷",
+      "weeks": "21-26",
+      "months": 1.5,
+      "color": "blue",
+      "description": "Add type safety to your JavaScript",
+      "topics": [
+        {
+          "week": "21-22",
+          "title": "TypeScript Fundamentals",
+          "tasks": [
+            "Types: string, number, boolean, arrays, tuples",
+            "Interfaces vs Type Aliases",
+            "Union types, intersection types"
+          ]
+        },
+        {
+          "week": "23-24",
+          "title": "Generics & Utility Types",
+          "tasks": [
+            "Generics: functions, classes, interfaces",
+            "Partial, Required, Readonly, Pick, Omit",
+            "Record, Exclude, Extract"
+          ]
+        },
+        {
+          "week": "25-26",
+          "title": "Real-World TypeScript",
+          "tasks": [
+            "Type-safe API responses",
+            "Discriminated unions",
+            "tsconfig.json deep understanding"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "React 19.2",
+      "emoji": "⚛️",
+      "weeks": "27-36",
+      "months": 2.5,
+      "color": "purple",
+      "description": "Master React and build production UIs",
+      "topics": [
+        {
+          "week": "27-28",
+          "title": "React Mental Model",
+          "tasks": [
+            "Virtual DOM & reconciliation",
+            "Fiber architecture basics",
+            "Component lifecycle (mentally)"
+          ]
+        },
+        {
+          "week": "29-30",
+          "title": "Hooks Deep Dive",
+          "tasks": [
+            "useState, useEffect, useRef, useMemo, useCallback",
+            "useReducer, useContext",
+            "Closure traps in useEffect"
+          ]
+        },
+        {
+          "week": "31-32",
+          "title": "Custom Hooks & Patterns",
+          "tasks": [
+            "Build: useDebounce, useLocalStorage, useFetch",
+            "Compound components pattern",
+            "Headless UI pattern"
+          ]
+        },
+        {
+          "week": "33-34",
+          "title": "State Management",
+          "tasks": [
+            "State colocation principles",
+            "Zustand for global state",
+            "TanStack Query for server state"
+          ]
+        },
+        {
+          "week": "35-36",
+          "title": "Forms & React 19 Features",
+          "tasks": [
+            "React Hook Form + Zod",
+            "use() hook, Actions, useOptimistic",
+            "React Compiler (auto-memoization)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "CSS, Tailwind & Accessibility",
+      "emoji": "🎨",
+      "weeks": "37-44",
+      "months": 2,
+      "color": "amber",
+      "description": "Beautiful, accessible, responsive styling",
+      "topics": [
+        {
+          "week": "37-38",
+          "title": "Modern CSS & Tailwind v4.3",
+          "tasks": [
+            "Flexbox & Grid mastery",
+            "Tailwind v4: CSS-first config, @theme",
+            "Responsive design (mobile-first)"
+          ]
+        },
+        {
+          "week": "39-40",
+          "title": "Web Accessibility (a11y)",
+          "tasks": [
+            "Semantic HTML & ARIA roles",
+            "Keyboard navigation & focus management",
+            "Lighthouse accessibility audit"
+          ]
+        },
+        {
+          "week": "41-42",
+          "title": "Figma-to-Code",
+          "tasks": [
+            "Read Figma designs, extract tokens",
+            "Design token system",
+            "Pixel-perfect implementation"
+          ]
+        },
+        {
+          "week": "43-44",
+          "title": "Design System",
+          "tasks": [
+            "Component API design",
+            "Documentation: Storybook",
+            "Build: accessible component library"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Next.js 16 & API Layer",
+      "emoji": "▲",
+      "weeks": "45-52",
+      "months": 2,
+      "color": "red",
+      "description": "Full-stack with the React meta-framework",
+      "topics": [
+        {
+          "week": "45-46",
+          "title": "Next.js 16 App Router",
+          "tasks": [
+            "Server vs Client Components",
+            "Routing, layouts, loading, error states",
+            "Server Actions for mutations"
+          ]
+        },
+        {
+          "week": "47-48",
+          "title": "Data Fetching Patterns",
+          "tasks": [
+            "TanStack Query v5: useQuery, useMutation",
+            "Caching strategies",
+            "Optimistic updates"
+          ]
+        },
+        {
+          "week": "49-50",
+          "title": "GraphQL Basics",
+          "tasks": [
+            "Schema, queries, mutations",
+            "Client: urql or Apollo",
+            "BFF pattern"
+          ]
+        },
+        {
+          "week": "51-52",
+          "title": "API Design Collaboration",
+          "tasks": [
+            "REST best practices",
+            "OpenAPI/Swagger spec reading",
+            "Error response patterns"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Testing & Production",
+      "emoji": "🧪",
+      "weeks": "53-64",
+      "months": 3,
+      "color": "cyan",
+      "description": "Ship with confidence, secure by default",
+      "topics": [
+        {
+          "week": "53-54",
+          "title": "Unit & Component Testing",
+          "tasks": [
+            "Vitest v4 setup & configuration",
+            "React Testing Library",
+            "Mocking: API calls, timers, modules"
+          ]
+        },
+        {
+          "week": "55-56",
+          "title": "E2E & Integration Testing",
+          "tasks": [
+            "Playwright v1.60: user flow tests",
+            "Visual regression testing",
+            "CI integration: GitHub Actions"
+          ]
+        },
+        {
+          "week": "57-58",
+          "title": "Performance",
+          "tasks": [
+            "Core Web Vitals: LCP, CLS, INP",
+            "React Profiler, code splitting",
+            "Bundle analysis"
+          ]
+        },
+        {
+          "week": "59-60",
+          "title": "Web Security",
+          "tasks": [
+            "XSS, CSRF, CORS, CSP",
+            "Security headers in Next.js",
+            "Secure authentication patterns"
+          ]
+        },
+        {
+          "week": "61-62",
+          "title": "DevOps & Git",
+          "tasks": [
+            "Git: branching strategies, PR reviews",
+            "GitHub Actions: CI/CD pipeline",
+            "Vercel: preview deployments"
+          ]
+        },
+        {
+          "week": "63-64",
+          "title": "System Design & Monorepo",
+          "tasks": [
+            "Design system architecture",
+            "Turborepo: monorepo setup",
+            "Feature flags implementation"
+          ]
+        }
+      ]
+    }
+  ],
+  "milestones": [
+    { "week": 4, "title": "✅ JS Foundation", "check": "Can explain closures without notes" },
+    { "week": 8, "title": "✅ JS Advanced", "check": "Can explain this binding for any snippet" },
+    { "week": 12, "title": "✅ JS Async", "check": "Can build Promise from scratch" },
+    { "week": 16, "title": "✅ JS DOM", "check": "Can build mini SPA without framework" },
+    { "week": 20, "title": "✅ JS Complete", "check": "Can build reactive system from scratch" },
+    { "week": 26, "title": "✅ TypeScript", "check": "Can write strictly-typed React code" },
+    { "week": 36, "title": "✅ React", "check": "Can build component library with custom hooks" },
+    { "week": 44, "title": "✅ CSS & A11y", "check": "Can build accessible design system" },
+    { "week": 52, "title": "✅ Next.js", "check": "Can build full-stack app with auth" },
+    { "week": 64, "title": "✅ FDE Ready", "check": "Ready to apply for FDE roles" }
+  ],
+  "techStack": {
+    "core": ["JavaScript ES2024+", "TypeScript 6.0", "React 19.2"],
+    "framework": ["Next.js 16 (App Router)"],
+    "styling": ["Tailwind CSS 4.3"],
+    "state": ["Zustand 5", "TanStack Query 5"],
+    "forms": ["React Hook Form 7.76", "Zod 4"],
+    "testing": ["Vitest 4.1", "Playwright 1.60", "React Testing Library"],
+    "build": ["Vite 8", "Turbopack"],
+    "linting": ["ESLint 10", "Prettier 3.8"],
+    "docs": {
+      "javascript": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      "typescript": "https://www.typescriptlang.org/docs/",
+      "react": "https://react.dev",
+      "nextjs": "https://nextjs.org/docs",
+      "tailwind": "https://tailwindcss.com/docs",
+      "tanstack": "https://tanstack.com/query",
+      "zustand": "https://github.com/pmndrs/zustand",
+      "vitest": "https://vitest.dev/guide/",
+      "playwright": "https://playwright.dev/docs/intro",
+      "reacthookform": "https://react-hook-form.com/get-started",
+      "zod": "https://zod.dev",
+      "vite": "https://vitejs.dev/guide/"
+    }
+  }
+}
