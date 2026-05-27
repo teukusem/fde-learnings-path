@@ -14,16 +14,15 @@ const phaseColors = {
 <section id="timeline" class="py-16">
   <div class="text-center mb-16">
     <h2 class="text-4xl font-bold text-white mb-4">Learning Timeline</h2>
-    <p class="text-slate-400 text-lg">6 phases across 64 weeks</p>
+    <p class="text-slate-400 text-lg">6 phases across 72 weeks — from frontend to full FDE</p>
   </div>
 
   <div class="space-y-12">
-    {curriculum.phases.map((phase, index) => {
+    {curriculum.phases.map((phase) => {
       const colors = phaseColors[phase.color as keyof typeof phaseColors];
       
       return (
-        <div class="group">
-          <!-- Phase header -->
+        <div class="group" id={`phase-${phase.id}`}>
           <div class={`p-6 rounded-2xl ${colors.bg} border ${colors.border} mb-6`}>
             <div class="flex items-center gap-4 mb-3">
               <span class="text-3xl">{phase.emoji}</span>
@@ -39,7 +38,6 @@ const phaseColors = {
             <p class="text-slate-300">{phase.description}</p>
           </div>
 
-          <!-- Topics grid -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             {phase.topics.map((topic) => (
               <div class={`week-block p-5 rounded-xl bg-slate-800/50 border border-slate-700/50 hover:border-slate-600/50 cursor-pointer`}
@@ -73,19 +71,14 @@ const phaseColors = {
 </section>
 
 <script>
-  // Save checkbox state to localStorage
   document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
     const input = checkbox as HTMLInputElement;
     const taskId = input.dataset.task;
     
     if (taskId) {
-      // Load saved state
       const saved = localStorage.getItem(`task-${taskId}`);
-      if (saved === 'true') {
-        input.checked = true;
-      }
+      if (saved === 'true') input.checked = true;
       
-      // Save on change
       input.addEventListener('change', () => {
         localStorage.setItem(`task-${taskId}`, input.checked.toString());
       });

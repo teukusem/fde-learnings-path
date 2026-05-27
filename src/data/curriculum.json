@@ -1,371 +1,241 @@
 {
+  "totalWeeks": 72,
+  "totalMonths": 18,
   "phases": [
     {
       "id": 0,
-      "title": "JavaScript Deep Dive",
+      "title": "JavaScript & TypeScript Foundation",
       "emoji": "⚡",
       "weeks": "1-20",
       "months": 5,
       "color": "green",
-      "description": "Build a rock-solid JavaScript foundation",
+      "description": "Rock-solid JS/TS foundation — the base of everything",
       "topics": [
-        {
-          "week": "1-2",
-          "title": "Types, Coercion & Variables",
-          "tasks": [
-            "Experiment: typeof, == vs ===, truthy/falsy values",
-            "Find 10 coercion surprises, write in notes.md",
-            "Baca: MDN Data Types & Type Coercion"
-          ]
-        },
-        {
-          "week": "3-4",
-          "title": "Scope, Hoisting & Closures",
-          "tasks": [
-            "Experiment: var vs let vs const behavior",
-            "Build: counter(), once(), memoize() from scratch",
-            "Fix: classic for-loop + setTimeout bug without let"
-          ]
-        },
-        {
-          "week": "5-6",
-          "title": "Functions & `this` Binding",
-          "tasks": [
-            "Build: pipe(), compose(), curry() from scratch",
-            "Build: myBind(), myCall(), myApply() polyfills",
-            "Experiment: 4 this-binding rules + priority"
-          ]
-        },
-        {
-          "week": "7-8",
-          "title": "Prototypes & Object Model",
-          "tasks": [
-            "Experiment: __proto__ vs prototype, prototype chain",
-            "Build: class inheritance without class keyword",
-            "Baca: javascript.info/prototypes"
-          ]
-        },
-        {
-          "week": "9-10",
-          "title": "Async: Promises & Event Loop",
-          "tasks": [
-            "Experiment: setTimeout vs Promise.resolve order",
-            "Build: 10 async predict-output puzzles",
-            "Baca: javascript.info/promises"
-          ]
-        },
-        {
-          "week": "11-12",
-          "title": "Async Patterns & Generators",
-          "tasks": [
-            "Build: fetchWithRetry(), parallelLimit(), timeout()",
-            "Experiment: sequential vs parallel await",
-            "Build: simple async task queue"
-          ]
-        },
-        {
-          "week": "13-14",
-          "title": "DOM Manipulation",
-          "tasks": [
-            "Build: Todo app (CRUD, vanilla JS)",
-            "Baca: javascript.info/document",
-            "Event delegation patterns"
-          ]
-        },
-        {
-          "week": "15-16",
-          "title": "Browser APIs",
-          "tasks": [
-            "Build: lazy image loader (IntersectionObserver)",
-            "Build: infinite scroll",
-            "Experiment: MutationObserver, ResizeObserver"
-          ]
-        },
-        {
-          "week": "17-18",
-          "title": "Design Patterns",
-          "tasks": [
-            "Build: EventEmitter from scratch",
-            "Implement: Module, Observer, Factory patterns",
-            "Baca: patterns.dev"
-          ]
-        },
-        {
-          "week": "19-20",
-          "title": "Reactive System & Performance",
-          "tasks": [
-            "Build: reactive() + effect() + computed()",
-            "Chrome DevTools Memory profiling",
-            "Find & fix a memory leak"
-          ]
-        }
+        { "week": "1-4", "title": "Types, Coercion, Scope, Closures", "tasks": [
+          "Experiment: typeof, == vs ===, truthy/falsy, coercion edge cases",
+          "Build: memoize(), once(), debounce() from scratch",
+          "Fix: classic for-loop + setTimeout bug without let"
+        ]},
+        { "week": "5-8", "title": "Functions, `this`, Prototypes", "tasks": [
+          "Build: pipe(), compose(), curry(), myBind(), myCall()",
+          "Experiment: 4 this-binding rules + prototype chain",
+          "Build: class inheritance without class keyword"
+        ]},
+        { "week": "9-12", "title": "Async Mastery: Promises & Event Loop", "tasks": [
+          "Build: fetchWithRetry(), parallelLimit(), timeout()",
+          "Build: Promise from scratch",
+          "Experiment: microtask vs macrotask queue"
+        ]},
+        { "week": "13-16", "title": "DOM & Browser APIs", "tasks": [
+          "Build: Todo app (vanilla JS, CRUD, event delegation)",
+          "Build: lazy loader (IntersectionObserver), infinite scroll",
+          "Experiment: MutationObserver, ResizeObserver, fetch API"
+        ]},
+        { "week": "17-20", "title": "TypeScript v6 + Design Patterns", "tasks": [
+          "TS: generics, utility types, discriminated unions",
+          "Build: EventEmitter, reactive() + effect() from scratch",
+          "tsconfig.json deep understanding, strict mode"
+        ]}
       ]
     },
     {
       "id": 1,
-      "title": "TypeScript",
-      "emoji": "🔷",
-      "weeks": "21-26",
-      "months": 1.5,
-      "color": "blue",
-      "description": "Add type safety to your JavaScript",
+      "title": "Frontend Engineering",
+      "emoji": "⚛️",
+      "weeks": "21-36",
+      "months": 4,
+      "color": "purple",
+      "description": "React 19 + Next.js 16 + Tailwind — production frontend",
       "topics": [
-        {
-          "week": "21-22",
-          "title": "TypeScript Fundamentals",
-          "tasks": [
-            "Types: string, number, boolean, arrays, tuples",
-            "Interfaces vs Type Aliases",
-            "Union types, intersection types"
-          ]
-        },
-        {
-          "week": "23-24",
-          "title": "Generics & Utility Types",
-          "tasks": [
-            "Generics: functions, classes, interfaces",
-            "Partial, Required, Readonly, Pick, Omit",
-            "Record, Exclude, Extract"
-          ]
-        },
-        {
-          "week": "25-26",
-          "title": "Real-World TypeScript",
-          "tasks": [
-            "Type-safe API responses",
-            "Discriminated unions",
-            "tsconfig.json deep understanding"
-          ]
-        }
+        { "week": "21-24", "title": "React 19.2 Deep Dive", "tasks": [
+          "Hooks: useState, useEffect, useRef, useReducer, useContext",
+          "React 19: use() hook, Actions, useOptimistic, React Compiler",
+          "Custom hooks: useDebounce, useLocalStorage, useFetch",
+          "Patterns: compound components, headless UI, state colocation"
+        ]},
+        { "week": "25-28", "title": "State Management & Forms", "tasks": [
+          "Zustand v5: global state, persist middleware",
+          "TanStack Query v5: useQuery, useMutation, caching",
+          "React Hook Form + Zod v4: type-safe forms",
+          "Optimistic updates, error handling UX"
+        ]},
+        { "week": "29-32", "title": "CSS, Tailwind v4.3, Accessibility", "tasks": [
+          "Flexbox & Grid mastery, responsive design",
+          "Tailwind v4: CSS-first config, @theme, container queries",
+          "A11y: semantic HTML, ARIA, keyboard nav, Lighthouse audit",
+          "Design tokens: Figma → code extraction"
+        ]},
+        { "week": "33-36", "title": "Next.js 16 App Router", "tasks": [
+          "Server Components vs Client Components",
+          "Server Actions, route handlers, middleware",
+          "Data fetching patterns, caching, revalidation",
+          "SEO: Metadata API, partial prerendering (PPR)"
+        ]}
       ]
     },
     {
       "id": 2,
-      "title": "React 19.2",
-      "emoji": "⚛️",
-      "weeks": "27-36",
-      "months": 2.5,
-      "color": "purple",
-      "description": "Master React and build production UIs",
+      "title": "Backend & API Engineering",
+      "emoji": "🔧",
+      "weeks": "37-48",
+      "months": 3,
+      "color": "blue",
+      "description": "Build & integrate APIs — FDE must handle the full stack",
       "topics": [
-        {
-          "week": "27-28",
-          "title": "React Mental Model",
-          "tasks": [
-            "Virtual DOM & reconciliation",
-            "Fiber architecture basics",
-            "Component lifecycle (mentally)"
-          ]
-        },
-        {
-          "week": "29-30",
-          "title": "Hooks Deep Dive",
-          "tasks": [
-            "useState, useEffect, useRef, useMemo, useCallback",
-            "useReducer, useContext",
-            "Closure traps in useEffect"
-          ]
-        },
-        {
-          "week": "31-32",
-          "title": "Custom Hooks & Patterns",
-          "tasks": [
-            "Build: useDebounce, useLocalStorage, useFetch",
-            "Compound components pattern",
-            "Headless UI pattern"
-          ]
-        },
-        {
-          "week": "33-34",
-          "title": "State Management",
-          "tasks": [
-            "State colocation principles",
-            "Zustand for global state",
-            "TanStack Query for server state"
-          ]
-        },
-        {
-          "week": "35-36",
-          "title": "Forms & React 19 Features",
-          "tasks": [
-            "React Hook Form + Zod",
-            "use() hook, Actions, useOptimistic",
-            "React Compiler (auto-memoization)"
-          ]
-        }
+        { "week": "37-40", "title": "Node.js Backend & REST APIs", "tasks": [
+          "Express/Fastify: routing, middleware, error handling",
+          "REST design: naming, status codes, pagination, versioning",
+          "Input validation: Zod schemas, error responses",
+          "File handling: uploads, streams, S3-compatible storage"
+        ]},
+        { "week": "41-44", "title": "Databases & Data Engineering", "tasks": [
+          "PostgreSQL: SQL, joins, indexes, transactions, query optimization",
+          "Prisma ORM: schema, migrations, type-safe queries",
+          "Redis: caching, sessions, rate limiting, pub/sub",
+          "MongoDB basics: document model, aggregation pipeline"
+        ]},
+        { "week": "45-46", "title": "Authentication & Integration", "tasks": [
+          "JWT: tokens, refresh tokens, token rotation",
+          "OAuth 2.0: authorization code flow, PKCE",
+          "API integrations: REST clients, webhooks, error handling",
+          "RBAC: role-based access control"
+        ]},
+        { "week": "47-48", "title": "GraphQL & Real-time", "tasks": [
+          "GraphQL: schema, queries, mutations, subscriptions",
+          "Client: urql or Apollo — when GraphQL > REST",
+          "WebSockets: real-time communication (Socket.io)",
+          "BFF (Backend for Frontend) pattern"
+        ]}
       ]
     },
     {
       "id": 3,
-      "title": "CSS, Tailwind & Accessibility",
-      "emoji": "🎨",
-      "weeks": "37-44",
-      "months": 2,
+      "title": "Infrastructure & DevOps",
+      "emoji": "☁️",
+      "weeks": "49-58",
+      "months": 2.5,
       "color": "amber",
-      "description": "Beautiful, accessible, responsive styling",
+      "description": "Deploy, scale, monitor — FDE ships to production",
       "topics": [
-        {
-          "week": "37-38",
-          "title": "Modern CSS & Tailwind v4.3",
-          "tasks": [
-            "Flexbox & Grid mastery",
-            "Tailwind v4: CSS-first config, @theme",
-            "Responsive design (mobile-first)"
-          ]
-        },
-        {
-          "week": "39-40",
-          "title": "Web Accessibility (a11y)",
-          "tasks": [
-            "Semantic HTML & ARIA roles",
-            "Keyboard navigation & focus management",
-            "Lighthouse accessibility audit"
-          ]
-        },
-        {
-          "week": "41-42",
-          "title": "Figma-to-Code",
-          "tasks": [
-            "Read Figma designs, extract tokens",
-            "Design token system",
-            "Pixel-perfect implementation"
-          ]
-        },
-        {
-          "week": "43-44",
-          "title": "Design System",
-          "tasks": [
-            "Component API design",
-            "Documentation: Storybook",
-            "Build: accessible component library"
-          ]
-        }
+        { "week": "49-50", "title": "Linux & Networking", "tasks": [
+          "Linux: commands, permissions, processes, SSH",
+          "Networking: TCP/IP, DNS, HTTP/HTTPS, firewalls",
+          "Shell scripting: bash basics",
+          "Troubleshooting: logs, curl, dig, netstat"
+        ]},
+        { "week": "51-52", "title": "Docker & Containers", "tasks": [
+          "Docker: images, containers, volumes, networks",
+          "Dockerfile: multi-stage builds, best practices",
+          "Docker Compose: multi-container apps",
+          "Container registries: Docker Hub, ECR"
+        ]},
+        { "week": "53-54", "title": "Cloud Platforms (AWS)", "tasks": [
+          "EC2: instances, security groups, key pairs",
+          "S3: storage, static hosting, presigned URLs",
+          "RDS: managed databases, backups",
+          "IAM: users, roles, policies (least privilege)",
+          "Lambda: serverless functions basics"
+        ]},
+        { "week": "55-56", "title": "CI/CD & Automation", "tasks": [
+          "GitHub Actions: workflows, secrets, environments",
+          "Pipeline: lint → test → build → deploy",
+          "Preview deployments, release management",
+          "Semantic versioning, changelogs"
+        ]},
+        { "week": "57-58", "title": "Monitoring & Observability", "tasks": [
+          "Logging: structured logging, log levels (Pino)",
+          "Metrics: Prometheus + Grafana basics",
+          "Error tracking: Sentry integration",
+          "Health checks, alerting, uptime monitoring"
+        ]}
       ]
     },
     {
       "id": 4,
-      "title": "Next.js 16 & API Layer",
-      "emoji": "▲",
-      "weeks": "45-52",
-      "months": 2,
+      "title": "Security & Compliance",
+      "emoji": "🔒",
+      "weeks": "59-64",
+      "months": 1.5,
       "color": "red",
-      "description": "Full-stack with the React meta-framework",
+      "description": "Secure by default — FDE handles sensitive customer data",
       "topics": [
-        {
-          "week": "45-46",
-          "title": "Next.js 16 App Router",
-          "tasks": [
-            "Server vs Client Components",
-            "Routing, layouts, loading, error states",
-            "Server Actions for mutations"
-          ]
-        },
-        {
-          "week": "47-48",
-          "title": "Data Fetching Patterns",
-          "tasks": [
-            "TanStack Query v5: useQuery, useMutation",
-            "Caching strategies",
-            "Optimistic updates"
-          ]
-        },
-        {
-          "week": "49-50",
-          "title": "GraphQL Basics",
-          "tasks": [
-            "Schema, queries, mutations",
-            "Client: urql or Apollo",
-            "BFF pattern"
-          ]
-        },
-        {
-          "week": "51-52",
-          "title": "API Design Collaboration",
-          "tasks": [
-            "REST best practices",
-            "OpenAPI/Swagger spec reading",
-            "Error response patterns"
-          ]
-        }
+        { "week": "59-60", "title": "Application Security", "tasks": [
+          "OWASP Top 10: SQL injection, XSS, CSRF, SSRF",
+          "Auth security: JWT best practices, token storage",
+          "Input validation & sanitization",
+          "CORS: understand & configure correctly",
+          "Security headers: CSP, HSTS, X-Frame-Options"
+        ]},
+        { "week": "61-62", "title": "Data Privacy & Compliance", "tasks": [
+          "GDPR basics: data protection, consent, right to be forgotten",
+          "Indonesian PDP Law (UU PDP): local compliance",
+          "Data encryption: at rest vs in transit, TLS/SSL",
+          "Audit logging: who accessed what, when",
+          "Secret management: env vars, Vault basics"
+        ]},
+        { "week": "63-64", "title": "Supply Chain Security", "tasks": [
+          "Dependency scanning: Snyk, npm audit, Trivy",
+          "Container security: image scanning",
+          "SAST/DAST basics: SonarQube, OWASP ZAP",
+          "SBOM (Software Bill of Materials)",
+          "Signed commits & artifacts (Sigstore)"
+        ]}
       ]
     },
     {
       "id": 5,
-      "title": "Testing & Production",
-      "emoji": "🧪",
-      "weeks": "53-64",
-      "months": 3,
+      "title": "FDE Skills & Career",
+      "emoji": "🎯",
+      "weeks": "65-72",
+      "months": 2,
       "color": "cyan",
-      "description": "Ship with confidence, secure by default",
+      "description": "The FDE differentiator — customer, communication, problem-solving",
       "topics": [
-        {
-          "week": "53-54",
-          "title": "Unit & Component Testing",
-          "tasks": [
-            "Vitest v4 setup & configuration",
-            "React Testing Library",
-            "Mocking: API calls, timers, modules"
-          ]
-        },
-        {
-          "week": "55-56",
-          "title": "E2E & Integration Testing",
-          "tasks": [
-            "Playwright v1.60: user flow tests",
-            "Visual regression testing",
-            "CI integration: GitHub Actions"
-          ]
-        },
-        {
-          "week": "57-58",
-          "title": "Performance",
-          "tasks": [
-            "Core Web Vitals: LCP, CLS, INP",
-            "React Profiler, code splitting",
-            "Bundle analysis"
-          ]
-        },
-        {
-          "week": "59-60",
-          "title": "Web Security",
-          "tasks": [
-            "XSS, CSRF, CORS, CSP",
-            "Security headers in Next.js",
-            "Secure authentication patterns"
-          ]
-        },
-        {
-          "week": "61-62",
-          "title": "DevOps & Git",
-          "tasks": [
-            "Git: branching strategies, PR reviews",
-            "GitHub Actions: CI/CD pipeline",
-            "Vercel: preview deployments"
-          ]
-        },
-        {
-          "week": "63-64",
-          "title": "System Design & Monorepo",
-          "tasks": [
-            "Design system architecture",
-            "Turborepo: monorepo setup",
-            "Feature flags implementation"
-          ]
-        }
+        { "week": "65-66", "title": "Debugging & Problem Solving", "tasks": [
+          "Systematic debugging: reproduce → isolate → fix → verify",
+          "Root cause analysis: 5 Whys, fishbone diagram",
+          "Network debugging: curl, browser DevTools, Wireshark basics",
+          "Database debugging: slow queries, explain plans",
+          "Debug 10 real-world scenarios from open source"
+        ]},
+        { "week": "67-68", "title": "Customer & Communication Skills", "tasks": [
+          "Requirements gathering: ask the right questions",
+          "Translate tech ↔ business: explain to non-tech stakeholders",
+          "Expectation management: say 'no' diplomatically",
+          "Scoping: estimate effort realistically (under-promise, over-deliver)",
+          "Write: technical docs, runbooks, customer guides"
+        ]},
+        { "week": "69-70", "title": "Business Acumen & Product Thinking", "tasks": [
+          "Product thinking: WHY features matter, not just HOW",
+          "Metrics: DAU, MAU, retention, conversion — understand customer KPIs",
+          "ROI: does this technical work deliver business value?",
+          "Industry knowledge: fintech, e-commerce, SaaS, healthcare",
+          "Prioritization: MoSCoW, impact vs effort matrix"
+        ]},
+        { "week": "71-72", "title": "Portfolio & Interview Prep", "tasks": [
+          "Build 3-5 FDE-specific projects (deployed, integrated, secured)",
+          "FDE interviews: system design, debugging challenge, customer scenario",
+          "LeetCode: 20 easy, 15 medium (JS)",
+          "Behavioral: STAR method, customer-facing stories",
+          "Resume: highlight deployment, integration, customer-facing experience"
+        ]}
       ]
     }
   ],
   "milestones": [
-    { "week": 4, "title": "✅ JS Foundation", "check": "Can explain closures without notes" },
-    { "week": 8, "title": "✅ JS Advanced", "check": "Can explain this binding for any snippet" },
-    { "week": 12, "title": "✅ JS Async", "check": "Can build Promise from scratch" },
-    { "week": 16, "title": "✅ JS DOM", "check": "Can build mini SPA without framework" },
-    { "week": 20, "title": "✅ JS Complete", "check": "Can build reactive system from scratch" },
-    { "week": 26, "title": "✅ TypeScript", "check": "Can write strictly-typed React code" },
-    { "week": 36, "title": "✅ React", "check": "Can build component library with custom hooks" },
-    { "week": 44, "title": "✅ CSS & A11y", "check": "Can build accessible design system" },
-    { "week": 52, "title": "✅ Next.js", "check": "Can build full-stack app with auth" },
-    { "week": 64, "title": "✅ FDE Ready", "check": "Ready to apply for FDE roles" }
+    { "week": 4, "title": "✅ JS Types & Closures", "check": "Can explain closures & coercion without notes" },
+    { "week": 8, "title": "✅ JS Functions & OOP", "check": "Can explain this binding, build polyfills" },
+    { "week": 12, "title": "✅ JS Async", "check": "Can build Promise from scratch, predict event loop" },
+    { "week": 16, "title": "✅ JS DOM & Browser", "check": "Can build mini SPA without framework" },
+    { "week": 20, "title": "✅ JS + TypeScript Complete", "check": "Can write strictly-typed code, design patterns" },
+    { "week": 28, "title": "✅ React & State Management", "check": "Can build component library with custom hooks" },
+    { "week": 36, "title": "✅ Frontend Engineering", "check": "Can build full Next.js app with a11y" },
+    { "week": 44, "title": "✅ Backend & Databases", "check": "Can build REST API with auth, DB, caching" },
+    { "week": 48, "title": "✅ API Integration", "check": "Can integrate 3rd party APIs, handle errors" },
+    { "week": 54, "title": "✅ Cloud & Containers", "check": "Can deploy app to AWS with Docker" },
+    { "week": 58, "title": "✅ CI/CD & Monitoring", "check": "Can set up pipeline with observability" },
+    { "week": 64, "title": "✅ Security & Compliance", "check": "Can secure app, handle sensitive data" },
+    { "week": 72, "title": "✅ FDE Ready", "check": "Ready to apply for FDE roles" }
   ],
   "techStack": {
     "core": ["JavaScript ES2024+", "TypeScript 6.0", "React 19.2"],
@@ -373,7 +243,12 @@
     "styling": ["Tailwind CSS 4.3"],
     "state": ["Zustand 5", "TanStack Query 5"],
     "forms": ["React Hook Form 7.76", "Zod 4"],
+    "backend": ["Node.js", "Express/Fastify", "GraphQL"],
+    "databases": ["PostgreSQL", "Redis", "MongoDB"],
     "testing": ["Vitest 4.1", "Playwright 1.60", "React Testing Library"],
+    "devops": ["Docker", "GitHub Actions", "AWS"],
+    "security": ["OWASP", "JWT/OAuth2", "Snyk", "Trivy"],
+    "monitoring": ["Prometheus", "Grafana", "Sentry"],
     "build": ["Vite 8", "Turbopack"],
     "linting": ["ESLint 10", "Prettier 3.8"],
     "docs": {
@@ -384,11 +259,21 @@
       "tailwind": "https://tailwindcss.com/docs",
       "tanstack": "https://tanstack.com/query",
       "zustand": "https://github.com/pmndrs/zustand",
+      "express": "https://expressjs.com",
+      "fastify": "https://fastify.dev",
+      "graphql": "https://graphql.org/learn",
+      "postgresql": "https://www.postgresql.org/docs",
+      "prisma": "https://www.prisma.io/docs",
+      "redis": "https://redis.io/docs",
+      "docker": "https://docs.docker.com",
+      "aws": "https://docs.aws.amazon.com",
+      "github-actions": "https://docs.github.com/en/actions",
       "vitest": "https://vitest.dev/guide/",
       "playwright": "https://playwright.dev/docs/intro",
-      "reacthookform": "https://react-hook-form.com/get-started",
-      "zod": "https://zod.dev",
-      "vite": "https://vitejs.dev/guide/"
+      "owasp": "https://owasp.org/www-project-top-ten/",
+      "prometheus": "https://prometheus.io/docs",
+      "grafana": "https://grafana.com/docs",
+      "sentry": "https://docs.sentry.io"
     }
   }
 }

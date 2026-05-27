@@ -2,19 +2,6 @@
 import curriculum from '../data/curriculum.json';
 
 const milestones = curriculum.milestones;
-
-const phaseColors = [
-  { bg: 'bg-green-500', text: 'text-green-400', label: 'JS Foundation' },
-  { bg: 'bg-blue-500', text: 'text-blue-400', label: 'JS Advanced' },
-  { bg: 'bg-purple-500', text: 'text-purple-400', label: 'JS Async' },
-  { bg: 'bg-amber-500', text: 'text-amber-400', label: 'JS DOM' },
-  { bg: 'bg-red-500', text: 'text-red-400', label: 'JS Complete' },
-  { bg: 'bg-cyan-500', text: 'text-cyan-400', label: 'TypeScript' },
-  { bg: 'bg-pink-500', text: 'text-pink-400', label: 'React' },
-  { bg: 'bg-emerald-500', text: 'text-emerald-400', label: 'CSS & A11y' },
-  { bg: 'bg-orange-500', text: 'text-orange-400', label: 'Next.js' },
-  { bg: 'bg-indigo-500', text: 'text-indigo-400', label: 'FDE Ready' }
-];
 ---
 
 <section id="milestones" class="py-16">
@@ -36,21 +23,26 @@ const phaseColors = [
 
   <!-- Timeline -->
   <div class="relative">
-    <!-- Vertical line -->
     <div class="absolute left-6 top-0 bottom-0 w-0.5 bg-slate-700"></div>
 
-    <div class="space-y-8">
-      {milestones.map((milestone, index) => {
-        const color = phaseColors[index] || phaseColors[0];
+    <div class="space-y-6">
+      {milestones.map((milestone) => {
+        const weekNum = parseInt(milestone.week);
+        let colorClass = 'bg-green-500';
+        if (weekNum <= 4) colorClass = 'bg-green-500';
+        else if (weekNum <= 20) colorClass = 'bg-blue-500';
+        else if (weekNum <= 36) colorClass = 'bg-purple-500';
+        else if (weekNum <= 48) colorClass = 'bg-cyan-500';
+        else if (weekNum <= 58) colorClass = 'bg-amber-500';
+        else if (weekNum <= 64) colorClass = 'bg-red-500';
+        else colorClass = 'bg-indigo-500';
         
         return (
           <div class="relative flex items-start gap-6 group">
-            <!-- Dot -->
-            <div class={`relative z-10 w-12 h-12 rounded-full ${color.bg} flex items-center justify-center flex-shrink-0 shadow-lg`}>
+            <div class={`relative z-10 w-12 h-12 rounded-full ${colorClass} flex items-center justify-center flex-shrink-0 shadow-lg`}>
               <span class="text-white font-bold text-sm">{milestone.week}</span>
             </div>
 
-            <!-- Content -->
             <div class="flex-1 p-5 rounded-xl bg-slate-800/50 border border-slate-700/50 hover:border-slate-600/50 transition-all">
               <div class="flex items-center justify-between mb-2">
                 <h3 class="font-bold text-white">{milestone.title}</h3>
@@ -63,7 +55,7 @@ const phaseColors = [
               </div>
               <p class="text-slate-400 text-sm">{milestone.check}</p>
               <div class="mt-3">
-                <span class={`text-xs ${color.text} bg-slate-900/50 px-2 py-1 rounded`}>
+                <span class="text-xs text-slate-500 bg-slate-900/50 px-2 py-1 rounded">
                   Week {milestone.week}
                 </span>
               </div>
@@ -86,13 +78,8 @@ const phaseColors = [
     position: relative;
     transition: all 0.2s;
   }
-  .milestone-check:hover {
-    border-color: #6366f1;
-  }
-  .milestone-check:checked {
-    background: #6366f1;
-    border-color: #6366f1;
-  }
+  .milestone-check:hover { border-color: #6366f1; }
+  .milestone-check:checked { background: #6366f1; border-color: #6366f1; }
   .milestone-check:checked::after {
     content: '✓';
     position: absolute;
@@ -105,7 +92,6 @@ const phaseColors = [
 </style>
 
 <script>
-  // Load & save milestone states
   function updateProgress() {
     const checks = document.querySelectorAll('.milestone-check') as NodeListOf<HTMLInputElement>;
     const completed = Array.from(checks).filter(c => c.checked).length;
@@ -114,12 +100,8 @@ const phaseColors = [
     const progressBar = document.getElementById('progress-bar');
     const progressText = document.getElementById('progress-text');
     
-    if (progressBar) {
-      progressBar.style.width = `${(completed / total) * 100}%`;
-    }
-    if (progressText) {
-      progressText.textContent = `${completed} / ${total}`;
-    }
+    if (progressBar) progressBar.style.width = `${(completed / total) * 100}%`;
+    if (progressText) progressText.textContent = `${completed} / ${total}`;
   }
 
   document.querySelectorAll('.milestone-check').forEach((checkbox) => {
@@ -127,13 +109,9 @@ const phaseColors = [
     const milestoneId = input.dataset.milestone;
     
     if (milestoneId) {
-      // Load saved state
       const saved = localStorage.getItem(`milestone-${milestoneId}`);
-      if (saved === 'true') {
-        input.checked = true;
-      }
+      if (saved === 'true') input.checked = true;
       
-      // Save on change
       input.addEventListener('change', () => {
         localStorage.setItem(`milestone-${milestoneId}`, input.checked.toString());
         updateProgress();
@@ -141,6 +119,5 @@ const phaseColors = [
     }
   });
 
-  // Initial progress update
   updateProgress();
 </script>

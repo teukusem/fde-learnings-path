@@ -2,36 +2,55 @@
 
 **Forward Deployed Engineer (FDE) Complete Learning Path**
 
-A comprehensive, self-paced curriculum to become a Forward Deployed Engineer in ~16 months.
+A comprehensive, self-paced curriculum to become a **Forward Deployed Engineer** — a software engineer who works directly with customers to deploy, customize, and integrate solutions.
 
-## 🚀 What is this?
+## 🚀 What is an FDE?
 
-This is a complete learning path for becoming a **Forward Deployed Engineer** — a software engineer who works directly with customers to deploy, customize, and integrate solutions. Think Palantir, Stripe, AWS Customer Engineers, etc.
+A Forward Deployed Engineer (FDE) is a software engineer who:
+- 🔧 **Deploys & customizes** product directly at customer environments
+- 🤝 **Works closely** with clients/stakeholders (not just internal teams)
+- ⚡ **Solves problems fast** — often under pressure, with tight deadlines
+- 📊 **Understands business** — translates customer needs to technical solutions
+- 🎯 **Focuses on value delivery**, not perfection
 
-## 📊 The Path
+**Companies that hire FDEs:** Palantir, Stripe, AWS, Google Cloud, GoTo, Grab, Shopee, many B2B SaaS startups.
 
-| Phase | Topic | Weeks | Months |
-|-------|-------|-------|--------|
-| 0 | JavaScript Deep Dive | 1-20 | 5 |
-| 1 | TypeScript | 21-26 | 1.5 |
-| 2 | React 19.2 | 27-36 | 2.5 |
-| 3 | CSS, Tailwind & Accessibility | 37-44 | 2 |
-| 4 | Next.js 16 & API Layer | 45-52 | 2 |
-| 5 | Testing & Production | 53-64 | 3 |
-| **Total** | | **64 weeks** | **~16 bulan** |
+## 📊 The Complete Path
+
+| Phase | Topic | Weeks | Months | Focus |
+|-------|-------|-------|--------|-------|
+| 0 | JS + TypeScript Foundation | 1-20 | 5 | Core skills |
+| 1 | Frontend Engineering | 21-36 | 4 | React + Next.js + A11y |
+| 2 | Backend & API Engineering | 37-48 | 3 | APIs + Databases + Auth |
+| 3 | Infrastructure & DevOps | 49-58 | 2.5 | Docker + AWS + CI/CD |
+| 4 | Security & Compliance | 59-64 | 1.5 | OWASP + Privacy + Scanning |
+| 5 | FDE Skills & Career | 65-72 | 2 | Debugging + Customer + Portfolio |
+| **Total** | | **72 weeks** | **~18 months** | |
 
 ## 🛠️ Tech Stack (2026)
 
 ```
 Core:           JavaScript ES2024+ + TypeScript 6.0
-UI:             React 19.2
-Framework:      Next.js 16 (App Router)
-Styling:        Tailwind CSS 4.3
-State:          Zustand 5 + TanStack Query 5
-Forms:          React Hook Form 7.76 + Zod 4
-Testing:        Vitest 4.1 + Playwright 1.60
-Build:          Vite 8 + Turbopack
+Frontend:       React 19.2 + Next.js 16 + Tailwind CSS 4.3
+State/Forms:    Zustand 5 + TanStack Query 5 + React Hook Form + Zod 4
+Backend:        Node.js + Express/Fastify + GraphQL
+Databases:      PostgreSQL + Redis + MongoDB
+DevOps:         Docker + GitHub Actions + AWS
+Security:       OWASP + JWT/OAuth2 + Snyk + Trivy
+Monitoring:     Prometheus + Grafana + Sentry
+Testing:        Vitest 4.1 + Playwright 1.60 + RTL
 ```
+
+## 🎯 FDE Skills (Beyond Coding)
+
+| Skill | Why It Matters |
+|-------|---------------|
+| **Debugging** | Fix production issues fast, under pressure |
+| **Communication** | Explain tech to non-tech stakeholders |
+| **Customer empathy** | Understand pain points, not just requirements |
+| **Business acumen** | Does this technical work deliver ROI? |
+| **Scoping** | Estimate effort realistically |
+| **Security** | Handle sensitive customer data safely |
 
 ## 🏃 Getting Started
 
@@ -46,35 +65,34 @@ git clone git@github.com:teukusem/fde-learnings-path.git
 cd fde-learnings-path
 
 # Install dependencies
-npm install
+yarn install
 
 # Start dev server
-npm run dev
+yarn dev
 
 # Build for production
-npm run build
+yarn build
 ```
 
-## 🎯 Features
+## 🌐 Live Website
 
-- **Interactive checklist** — Track your progress with checkboxes
-- **Progress persistence** — Saves to localStorage
-- **Responsive design** — Works on mobile and desktop
-- **Dark theme** — Easy on the eyes
-- **Sidebar navigation** — Quick access to all sections
-- **Time commitment guide** — Choose your pace
+**https://teukusem.github.io/fde-learnings-path/**
 
-## 📚 Resources
+Features:
+- Interactive checklist with progress tracking
+- Dark theme, responsive design
+- Sidebar navigation
+- Time commitment guide
+- Milestone tracker
 
-- [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- [javascript.info](https://javascript.info)
+## 📚 Key Resources
+
+- [MDN JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [React Docs](https://react.dev)
 - [Next.js Docs](https://nextjs.org/docs)
-- [Tailwind CSS](https://tailwindcss.com/docs)
-
-## 🤝 Contributing
-
-This is a personal learning path, but feel free to fork and customize for your own journey!
+- [OWASP Top 10](https://owasp.org/www-project-top-ten/)
+- [Docker Docs](https://docs.docker.com)
+- [AWS Docs](https://docs.aws.amazon.com)
 
 ## 📝 License
 
