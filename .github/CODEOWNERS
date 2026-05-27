@@ -1,0 +1,12 @@
+# Default owners for everything
+* @teukusem
+
+# Documentation
+*.md @teukusem
+
+# Source code
+src/ @teukusem
+
+# Configuration
+*.json @teukusem
+*.mjs @teukusem
