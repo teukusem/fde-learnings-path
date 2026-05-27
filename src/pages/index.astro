@@ -3,6 +3,7 @@ import '../styles/global.css';
 import Hero from '../components/Hero.astro';
 import Timeline from '../components/Timeline.astro';
 import TechStack from '../components/TechStack.astro';
+import BusinessImpact from '../components/BusinessImpact.astro';
 import Milestones from '../components/Milestones.astro';
 import Sidebar from '../components/Sidebar.astro';
 ---
@@ -13,7 +14,7 @@ import Sidebar from '../components/Sidebar.astro';
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FDE Learning Path — Forward Deployed Engineer</title>
-    <meta name="description" content="Complete learning path to become a Forward Deployed Engineer. 64 weeks curriculum covering JavaScript, TypeScript, React, Next.js, and more." />
+    <meta name="description" content="Complete learning path to become a Forward Deployed Engineer. 72 weeks curriculum covering JavaScript, TypeScript, React, Next.js, Backend, DevOps, Security, and Business Acumen." />
   </head>
   <body class="min-h-screen">
     <!-- Background gradient -->
@@ -33,6 +34,7 @@ import Sidebar from '../components/Sidebar.astro';
           <div class="hidden md:flex items-center gap-6 text-sm text-slate-300">
             <a href="#timeline" class="hover:text-white transition-colors">Timeline</a>
             <a href="#tech-stack" class="hover:text-white transition-colors">Tech Stack</a>
+            <a href="#business-impact" class="hover:text-white transition-colors">💰 Business</a>
             <a href="#milestones" class="hover:text-white transition-colors">Milestones</a>
           </div>
         </div>
@@ -54,6 +56,7 @@ import Sidebar from '../components/Sidebar.astro';
           <div class="flex-1 space-y-24">
             <Timeline />
             <TechStack />
+            <BusinessImpact />
             <Milestones />
           </div>
         </div>

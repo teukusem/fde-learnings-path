@@ -205,12 +205,17 @@
           "Scoping: estimate effort realistically (under-promise, over-deliver)",
           "Write: technical docs, runbooks, customer guides"
         ]},
-        { "week": "69-70", "title": "Business Acumen & Product Thinking", "tasks": [
-          "Product thinking: WHY features matter, not just HOW",
-          "Metrics: DAU, MAU, retention, conversion — understand customer KPIs",
-          "ROI: does this technical work deliver business value?",
-          "Industry knowledge: fintech, e-commerce, SaaS, healthcare",
-          "Prioritization: MoSCoW, impact vs effort matrix"
+        { "week": "69-70", "title": "Business Acumen: Stakeholders & Real Impact", "tasks": [
+          "STAKEHOLDER MAP: C-Suite (ROI), VP (efficiency), Manager (timeline), Users (UX), IT (security)",
+          "SPEAK THEIR LANGUAGE: C-Suite wants numbers, Users want simplicity, IT wants compliance",
+          "REVENUE IMPACT: MRR growth via churn reduction (15% → 5% abandonment = $1.8M/year)",
+          "OPEX REDUCTION: AWS optimization ($50K/mo → $32.5K = $210K/year savings)",
+          "ROI FRAMEWORK: (Gain - Cost) / Cost × 100 — justify every project with numbers",
+          "KEY METRICS: MRR, ARR, Churn Rate, ARPU, LTV, CAC, NPS, TCO, OpEx",
+          "IMPACT REPORT: Before/after metrics, ROI calculation, recommendation for next phase",
+          "SCOPING: MoSCoW (Must/Should/Could/Won't), Impact vs Effort matrix, under-promise over-deliver",
+          "WRITE IMPACT EMAILS: Problem → Solution → Impact → Cost → Next Steps format",
+          "INDUSTRY PATTERNS: Fintech (compliance), E-commerce (conversion), SaaS (retention), Healthcare (data privacy)"
         ]},
         { "week": "71-72", "title": "Portfolio & Interview Prep", "tasks": [
           "Build 3-5 FDE-specific projects (deployed, integrated, secured)",
